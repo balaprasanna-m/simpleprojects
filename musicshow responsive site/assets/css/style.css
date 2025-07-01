@@ -1,0 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;box-sizing: border-box;
+}
+
+.navpr{display: grid;grid-template-columns:200px 100px 100px 100px 100px ;grid-template-rows:400px;}
+.bgviolet{background-color: blueviolet; border-radius:5px ;}
+.bm{border-color: white;background-color: blueviolet;border-radius: 5px;}
