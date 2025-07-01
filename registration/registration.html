@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</head>
+<body onLoad="document.registration.fname.focus();"><form name="registration"><div  style="background-image: url(./assets/images/mass.jpg);background-repeat: no-repeat;">
+    <div class="row container-fluid" >
+        <div class="col-sm-2 col-md-3 col-lg-4"></div>
+        <div class="col-sm-8 col-md-6 col-lg-4">
+          <div style="margin-top: 30px;"><h1 style="color: rgb(24, 19, 129);border-radius: 5px;" class="text-center bg-white ">REGISTRRATION</h1></div>
+  <div class="form mb-3"style="margin-top: 20px;">
+     
+  <input type="text" class="form-control" id="rname" placeholder="NAME" name="fname" >
+
+</div>
+<div class="form mb-3">
+  <input type="text" class="form-control" id="ruid" placeholder="USERID" name="userid" onblur="userid_validation()">
+<div><h6 style="color: red;" id="er1"></h6></div>
+</div>
+
+<div class="form mb-3">
+  <input type="password" class="form-control" id="rpassword" placeholder="PASSWORD"name="password" onblur="password_validation()">
+ <div><h6 style="color: red;" id="er2"></h6></div>
+</div>
+
+<div><select class="form-select form-select-sm mb-3" aria-label=".form-select-sm example"id="rgender"  >
+  <option selected>GENDER</option>
+  <option value="Male">Male</option>
+  <option value="Female">Female</option>
+</select></div>
+
+<select class="form-select form-select-sm mb-3" aria-label=".form-select-sm example" id="rdistrict">
+  <option selected>DISTRICT</option>
+  <option value="chennai">CHENNAI</option>
+  <option value="namakkal">NAMAKKAL</option>
+  <option value="thiruvallur">THIRUVALLUR</option>
+</select>
+<div class="form mb-3">
+  <input type="text" class="form-control" id="remail" placeholder="EMAIL">
+
+</div>
+<div class="form mb-3">
+  <input type="text" class="form-control" id="rmobile" placeholder="MOBILE" name="phone" onblur="otp_generation()">
+  <div><h6 style="color: red;" id="er3"></h6></div>
+</div>
+<div class="form mb-3">
+  <input type="text" class="form-control" id="rotp" placeholder="OTP">
+ 
+</div>
+<div  class="mb-3"><div class="row">
+  <div class="col">
+    <input type="text" class="form-control" placeholder="HEIGHT" aria-label="First name" id="rheight">
+  </div>
+  <div class="col">
+    <input type="text" class="form-control" placeholder="WEIGHT" aria-label="Last name" id="rweight">
+  </div>
+</div></div>
+<div class="mb-3 text-center"><h6 style="color: red;" id="er4"></h6></div>
+<div class="text-center "style="margin-top: 10px;">
+  <div class="mb-3"><input type="button" value="Login" onclick="sumo()" class="btn-lg  btn-primary" ></div> 
+</div>
+
+
+<div class="text-center"><a style="text-decoration: none;" href="./login.html">Already Register Login</a></div>
+<div>aa</div>
+  </form>
+</div>
+        <div class="col-sm-2 col-md-3 col-lg-4"></div>
+    </div>
+    
+
+</div></form>
+<script>
+
+let k=0;
+
+
+
+
+   let fa=[];
+  function userid_validation() 
+{
+	var b = document.registration.userid.value;
+	let uid=document.registration.userid;
+	
+   if(b.length>7){
+            if(/[^a-z0-9-]/.test(b)){ uid.focus()}
+           else{
+          document.getElementById('er1').innerHTML="Good";
+          }
+        }
+          else{
+            document.getElementById('er1').innerHTML="Length less than 8";
+          
+             uid.focus()
+          }
+           
+
+	
+}
+ function password_validation() 
+{
+	var c = document.registration.password.value;
+  let pass=document.registration.password;
+  
+  
+	
+	
+    if(/[0-9]/.test(c))
+    {
+      
+      if(/[A-Z]/.test(c)){
+        if(/[^a-zA-Z0-9]/.test(c)){
+          if(c.length>7){
+            document.getElementById('er2').innerHTML="Good";
+            
+          }
+          else{
+            document.getElementById('er2').innerHTML="Length less than 8";
+             pass.focus()
+          }
+            
+        }
+        else{
+          document.getElementById('er2').innerHTML="Requires symbool";
+            pass.focus()
+        }
+      }
+      else{document.getElementById('er2').innerHTML="Requires capital letter";  pass.focus()
+      }
+    }
+    else{
+  document.getElementById('er2').innerHTML="Requires number";  pass.focus()
+      
+    }
+    
+     
+}
+function otp_generation()
+{
+  var g = document.registration.phone.value;
+  let ph=document.registration.phone
+  if(g.length==10){
+     k=Math.random();
+k=k*10000;
+k=parseInt(k);
+alert(k)
+  }
+  else{
+     document.getElementById('er3').innerHTML="Enter 10 digit only";
+     ph.focus();  
+    
+  }
+
+ 
+
+}
+function sumo()
+{
+  var h=document.getElementById("rotp").value
+  console.log(k);
+  
+  
+  if(k!=0){
+  
+  if(k==h){
+     var a=document.getElementById("rname").value
+  console.log(a);
+ var b=document.getElementById("ruid").value
+  console.log(b);
+  var c=document.getElementById("rpassword").value
+  console.log(c);
+   var d=document.getElementById("rgender").value
+  console.log(d);
+   var e=document.getElementById("rdistrict").value
+  console.log(e);
+   var f=document.getElementById("remail").value
+  console.log(f);
+   var g=document.getElementById("rmobile").value
+  console.log(g);
+   var h=document.getElementById("rotp").value
+  console.log(h);
+   var i=document.getElementById("rheight").value
+  console.log(i);
+  var j=document.getElementById("rweight").value
+  console.log(j);
+  assign(b, c);
+ 
+  }
+  
+ else{
+   document.getElementById('er4').innerHTML="Invalid OTP";
+   
+ }
+  
+  }
+  else{
+     document.getElementById('er4').innerHTML="Enter valid details";
+  }
+
+
+}
+function assign( b, c) {
+       
+        
+        
+        let t=[b,c]
+        
+        
+        
+          
+           fa.push(t);
+            console.log(fa);
+      localStorage.setItem(b,fa);  
+      
+      }
+
+
+
+
+
+</script>
+</body>
+</html>
