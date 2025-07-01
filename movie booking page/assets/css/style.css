@@ -1,0 +1,81 @@
+
+    *{ font-family: "Inter", sans-serif;
+      font-optical-sizing: auto;
+        font-style: normal;
+            }
+            .stick{position: sticky;top: 0;}
+    .nav{display: flex;}
+    .imgsld{ margin-top: 30px;}
+    .srbar{margin-top: 30px;padding: 30px;display: flex;}
+    
+    .onenav{margin-left: 30px;}
+    .twonav{margin-left: 100px;  }
+    .threenav {margin-left: 15px;}
+    .fournav{margin-left: 400px; width: 250px;height: 40px;margin-top: 25px;border: solid;border-radius: 40px;background-color: rgba(6, 6, 162,0.7);}
+    .fivenav{margin-left: 30px; margin-top: 8px;margin-bottom: 8px;}
+    .nav a{text-decoration: none;}
+    .imgsld{display: flex;}
+    .img1{margin-left: 55px;}
+    .img2{margin-left: 25px;margin-right: 25px;}
+    .img3{margin-right: 50px;}
+    .srbar1{justify-content: flex-start;margin-left: 40px;border: solid;border-color: rgb(205, 247, 247);}
+    .srbar2{flex-grow: 1; margin-left: 10px;}
+    .srbar3{justify-content: flex-end;margin-right: 60px; margin-left: 10px}
+    .srbar4{width: 180px;height:30px ;}
+    .srbar5{width: 100%; height: 25px;}
+    .srbar6{width: 180px;height:30px ;}
+    .row3{display: flex; }
+    .drbar{flex-basis: 400px;margin-left: 70px; margin-right: 10px; border: solid; border-radius: 20px; 
+    display: grid;grid-template-rows: 50px 200px 50px 60px 50px 90px 50px 200px 50px 30px 50px ;grid-template-columns: 400px;
+   height: 800px;resize: both;overflow:auto;border-color: white;}
+    .ogmoviebar{flex-basis: 920px;border: solid;border-radius: 10px;border-color: white;width: 900px;height: 800px;resize: both;overflow: auto;}
+    .drbar1 input{width: 99%;height: 100%; border: solid;border-radius: 30px;margin-left: 2px;border-color: white;}
+ 
+    .drbar2{display: grid;grid-template-columns:45px auto ;grid-template-rows: 6,40px;}
+     .ogmoviebar{display: grid;grid-template-columns:920px ;grid-template-rows: 50px 515px  515px 515px ; row-gap: 5px;}
+     .og1{display: grid; grid-template-columns:1fr 1fr 1fr;grid-template-rows: 515px;column-gap: 5px;}
+     .og2{display: grid;grid-template-columns:1fr ;grid-template-rows: 380px 70px 50px ; row-gap: 5px; }
+     /* .og2 div{border: solid;} */
+     .ogmoviebar img{width: 290px; height: 375px; padding-left: 5px;}
+     .og1 a{text-decoration: none; border: solid; border-radius: 10px;border-color:rgba(6, 6, 6,0.1); }
+     .og3{display: grid;grid-template-columns:1fr ;grid-template-rows:40px 30px  ;border-bottom: solid;border-color: rgba(6, 6, 6,0.1);}
+     .og3 b,span{padding-left: 10px;}
+     .og2 h3{padding-left: 75px; }
+       .up4{display: grid;grid-template-columns:1490px ;grid-template-rows: 50px 580px;border: solid; margin-left: 70px;margin-right:80px;border-radius: 10px; margin-top: 10px;border-color: white;}
+     .upgbar{display: grid;grid-template-columns: 330px 330px 330px 330px ;grid-template-rows: 560px ;column-gap: 5px;}
+     .up1{ display: grid; grid-template-columns:335 ;grid-template-rows:440px 60px 60px ; border: solid;border-radius: 10px;margin-top: 5px;border-color: rgba(37, 35, 35,0.1);}
+     .up2{ display: grid;grid-template-columns:335;grid-template-rows:30px 30px ;}
+     .upgbar a{text-decoration: none;}
+     .up2 b{ padding-left: 10px;}
+     .up1 h3{padding-left: 90px;}
+     .up1 img{ border-top: solid;border-radius: 20px; border-color: white;width:98%}
+      .up2 {border-bottom: solid;border-color: rgba(37, 35, 35,0.1)}
+      .lang{display: grid;grid-template-columns: 1330px;grid-template-rows:40px 80px 40px 80px ;margin-left: 80px;margin-right: 80px;border: solid;border-color: rgba(4, 4, 4,0.1);border-radius: 10px;}
+      .lang1{display: grid;grid-template-columns: 165px 165px 165px 165px 165px 165px 165px;grid-template-rows: 80px;column-gap: 8px;margin-left: 5px;}
+      .lang1 h4{border: solid;border-radius: 10px;text-align: center;border-color: rgba(4, 4, 4,0.2)}
+      .about{margin-left: 80px;margin-right: 80px;margin-top: 300px;}
+      .dmain{display: flex;flex-direction: column;margin-left: 60px;margin-right: 60px;}
+      .dfirst{display: grid;grid-template-columns:400px 440px 150px 90px 90px 220px ;grid-template-rows: 400px;border: solid;border-radius: 10px;border-color: rgb(27, 26, 26,0.1);}
+      .df1{display: grid;grid-template-columns: 400px;grid-template-rows:60px 180px 60px 100px ;}
+      .df1 span{display: block; padding-top: 20px;}
+      .df3 input{ height:35px;width: 240px;margin: 10px;border-radius: 8px;}
+      .df2 input{height:40px ;width:170px ;margin-left: 6px;margin-top: 5px;border-radius: 8px;}
+      #a{margin-top: 15px; width:365px ;height: 50px;margin-left: 5px;border: solid;border-radius: 10px;background-color: aliceblue;border-color: rgba(15, 15, 15,0.1);}
+      .df4{display: grid;grid-template-columns: 150px;grid-template-rows: 300px 100px;}
+      .df5{display: grid; grid-template-rows: 350px 50px; grid-template-columns: 400px;}
+      .df5 img{width: 205px;height:345px ;margin-top: 2px;margin-left: 2px;border: solid;border-radius: 10px;}
+      .df5 input{width: 70px;height: 30px;margin-left: 8px;margin-top: 10px; border-radius: 13px;}
+      #b{margin-left: 40px;width: 120px;}
+      .sa{display: grid;grid-template-rows:120px ;grid-template-columns:600px 550px 400px ;margin-top: 40px;}
+      .sa1{display: grid;grid-template-rows:120px ;grid-template-columns:60px 60px 60px 60px 60px 300px ;}
+      .sa2{display: grid;grid-template-rows:120px;grid-template-columns:110px 110px 110px 110px 110px;}
+      .sa1 input{width:40px ;height:40px ; padding-bottom: 8px;border-radius: 5px;}
+      .sa2 input{width: 100px;height:30px;border-radius: 10px;}
+      .sa3 input{width: 200px;height: 30px;border-radius: 10px;margin-left: 10px;}
+      .thbar{display: grid;grid-template-rows:50px 200px 200px 200px 200px ;grid-template-columns:100px ;border: solid;margin-top: 10px;}
+      .th1{display: grid;grid-template-columns:400px 150px 150px 150px 150px 200px;grid-template-rows: 300px;column-gap: 5px;;}
+      .th2{display: grid;grid-template-columns: 400px;grid-template-rows: 75px 60px 65px;}
+      .th2 input{width: 120px;height: 30px;margin-left: 10px;margin-top: 10px;border-radius: 10px;}
+      #c{border: solid;padding-left: 25px;margin-top: 20px;border-radius: 10px;}
+      .th4 input{width: 1360px;height: 50px;}
+      
