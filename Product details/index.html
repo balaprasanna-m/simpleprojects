@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<style> table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color:rgb(232, 227, 227);
+        }</style>   
+</head>
+<body onLoad="document.proddet.productn.focus();"><form name="proddet"><div >
+    <div class="row container-fluid" >
+        <div class="col-sm-2 col-md-3 col-lg-4"></div>
+        <div class="col-sm-8 col-md-6 col-lg-4">
+          <div style="margin-top: 120px;"><h1 style="color: rgb(24, 19, 129);border-radius: 5px;" class="text-center bg-white ">PRODUCT DETAILS</h1></div>
+
+<div class="form-floating mb-3" style="margin-top: 20px;">
+  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" id="Pname" name="productn" onblur="productname()">
+  <label for="floatingInput">PRODUCT NAME</label>
+
+</div>
+
+<div class="form-floating mb-3">
+  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="producti"  onblur="productid()">
+  <label for="floatingInput">PRODUCT ID</label>
+</div>
+
+
+
+<div class="form-floating mb-3">
+  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"name="productd" onblur="expirydate()">
+  <label for="floatingInput">EXPIRY DATE</label>
+</div>
+<div  class="mb-3"><div class="row">
+  <div class="col">
+   <div class="form-floating mb-3">
+  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="productq" onblur="quantity()">
+  <label for="floatingInput">QUANTITY</label>
+  </div> 
+  
+  </div>
+  <div class="col">
+    <div class="form-floating mb-3">
+  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="productp">
+  <label for="floatingInput">PRICE</label>
+</div>
+    
+  </div>
+</div></div>
+<div class="text-center" id="one">
+</div>
+<div class="text-center "style="margin-top: 10px;">
+  <div class="mb-3"><input type="button" value="ADD" onclick="main()" class="btn-lg  btn-primary" ></div> 
+</div>
+
+
+
+
+  
+</div>
+        <div class="col-sm-2 col-md-3 col-lg-4"></div>
+    </div>
+    
+
+</div></form>
+
+<div style="margin-top: 200px;" >
+   <table id="dataTable">
+        <thead>
+            <tr>
+                <th>PRODUCTNAME</th>
+                <th>PRODUCTID</th>
+                <th>EXPIRYDATE</th>
+                <th>QUANTITY</th>
+                <th>PRICE</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            
+        </tbody>
+    </table>
+</div>
+<script>let fa=[];let n=0;
+   let a=document.proddet.productn;
+    let b=document.proddet.producti;
+     let c=document.proddet.productd;
+      let d=document.proddet.productq;
+       let e=document.proddet.productp;
+    function productname(){
+      let pn=document.proddet.productn.value;
+ 
+      if(pn==""){
+        a.focus()
+      }
+      else{
+         b.focus()
+      }
+      
+      
+      return pn;
+      }
+      function productid(){
+      let pi=document.proddet.producti.value;
+    
+      if(pi==""){
+        b.focus()
+      }
+      else{
+         c.focus()
+      }
+      return pi;
+      }
+      function expirydate(){
+      let pd=document.proddet.productd.value;
+    
+      if(pd==""){
+        c.focus()
+      }
+      else{
+         d.focus()
+      }
+      return pd;
+      }
+      function quantity(){
+      let pq=document.proddet.productq.value;
+     
+      if(pq==""){
+        d.focus();
+      }
+      else{
+         e.focus()
+      }
+      return pq;
+      }
+      function main(){
+        let pp= document.proddet.productp.value;
+     if(pp==""){
+       document.getElementById('one').innerHTML="Enter valid details";
+
+     }
+      else{
+        pn=productname();
+     pi=productid()
+      pd=expirydate();
+      pq=quantity();
+      
+    assign();
+      }
+      
+      }  
+
+
+function assign( ) {
+       let pp= document.proddet.productp.value;
+       
+        let t=[pn,pi,pd,pq,pp]
+        
+         fa.push(t);
+            console.log(fa);
+      localStorage.setItem(pn,fa);
+      
+     supera();
+
+       
+       
+       
+          
+          }
+      function supera(){
+         let geta= localStorage.getItem(pn)
+         let fi=geta.split(",")
+         console.log(fi);
+         console.log(fi[0]);
+         while(n<100){
+         const tableBody = document.getElementById('tableBody');
+            const newRow = document.createElement('tr');
+            
+            newRow.innerHTML = `
+                <td> ${fi[0+n]}</td>
+                <td>${fi[1+n]}</td>
+                <td>${fi[2+n]}</td>
+                <td>${fi[3+n]}</td>
+                <td>${fi[4+n]}</td>
+            
+            `
+            
+            tableBody.appendChild(newRow);
+         n=n+5;
+         console.log(n);
+         break;
+         
+         }
+         
+      }
+      
+
+
+
+
+ </script>
+ 
+       
+    
+</body>
+</html>
